@@ -4,22 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
     <title>Галерея фотографій</title>
 </head>
 <body>
-    <header>
-        <h1>FOTO IMAGE LIST</h1>
-    </header>
-    <main>
-        <div id="gallery" class="gallery"></div>
-        <div class="buttons">
-            <button id="loadMore">Завантажити ще 4 картинки</button>
-            <button id="clearGallery">Очистити галерею</button>
-            <button id="removeLast">Видалити останню картинку</button>
-            <button id="reverseGallery">Перевернути галерею</button>
-            <button id="shuffleGallery">Перемішати галерею</button>
+    <main class="page">
+        <header class="page-header">
+            <p class="eyebrow">Колекція фотографій</p>
+            <h1>Галерея моментів</h1>
+            <p class="intro">Відкривайте нові знімки та керуйте галереєю на свій смак.</p>
+        </header>
+
+        <section aria-label="Галерея фотографій">
+            <div id="gallery" class="gallery" aria-live="polite"></div>
+            <p id="status" class="status" role="status" aria-live="polite"></p>
+        </section>
+
+        <div class="buttons" aria-label="Керування галереєю">
+            <button id="loadMore" class="button button-primary" type="button">Завантажити ще 4 картинки</button>
+            <button id="clearGallery" class="button" type="button">Очистити галерею</button>
+            <button id="removeLast" class="button" type="button">Видалити останню картинку</button>
+            <button id="reverseGallery" class="button" type="button">Перевернути галерею</button>
         </div>
     </main>
-    <script src="script.js"></script>
 </body>
 </html>
